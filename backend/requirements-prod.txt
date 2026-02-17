@@ -6,3 +6,5 @@ opencv-python-headless
 pydantic
 python-multipart
 slowapi
+python-jose[cryptography]
+passlib[bcrypt]
