@@ -1,0 +1,18 @@
+fastapi
+uvicorn[standard]
+numpy
+scipy
+opencv-python-headless
+mediapipe
+pydantic
+python-multipart
+# For later integration
+requests
+slowapi
+reportlab
+python-jose[cryptography]
+passlib[bcrypt]
+psutil
+torch
+torchvision
+ultralytics

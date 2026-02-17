@@ -1,0 +1,77 @@
+{
+    "High Heart Rate (Pitta/Vata)": [
+        1,
+        2,
+        0
+    ],
+    "Low Heart Rate (Kapha)": [
+        0,
+        0,
+        2
+    ],
+    "Irregular Rhythm": [
+        3,
+        0,
+        0
+    ],
+    "Red Tip (Heart Logic/Pitta)": [
+        0,
+        3,
+        0
+    ],
+    "Red Sides (Liver/Spleen Pitta)": [
+        0,
+        3,
+        0
+    ],
+    "White Coating (Ama/Toxins)": [
+        0,
+        0,
+        3
+    ],
+    "White Center (Stomach Ama)": [
+        0,
+        0,
+        2
+    ],
+    "Pale Tongue (Vata/Anemia)": [
+        2,
+        0,
+        0
+    ],
+    "Disturbed Sleep (Vata)": [
+        2,
+        0,
+        0
+    ],
+    "Acidic Digestion (Pitta)": [
+        0,
+        2,
+        0
+    ],
+    "Bloating (Vata)": [
+        2,
+        0,
+        0
+    ],
+    "Slow Digestion (Kapha)": [
+        0,
+        0,
+        2
+    ],
+    "High Energy": [
+        1,
+        2,
+        0
+    ],
+    "Low Energy": [
+        0,
+        0,
+        2
+    ],
+    "Variable Energy": [
+        2,
+        0,
+        0
+    ]
+}
