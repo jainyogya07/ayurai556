@@ -1,60 +1,46 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme {
-  --color-gold: #d4af37;
-  --color-gold-light: #f4cf57;
-  --color-gold-dark: #aa8c2c;
-  --color-charcoal: #1a1a1a;
-  --color-cream: #f5f5dc;
-
-  --font-display: var(--font-playfair);
-  --font-body: var(--font-lato);
-
-  /* Advanced Animations */
-  --animate-aurora: aurora 20s linear infinite;
-  --animate-text-shimmer: text-shimmer 3s linear infinite;
-  --animate-pulse-glow: pulse-glow 3s ease-in-out infinite;
-
-  @keyframes aurora {
-    0% {
-      background-position: 50% 50%, 50% 50%;
-    }
-
-    100% {
-      background-position: 350% 50%, 350% 50%;
-    }
+/* Keyframes */
+@keyframes aurora {
+  0% {
+    background-position: 50% 50%, 50% 50%;
   }
 
-  @keyframes text-shimmer {
-    0% {
-      background-position: 0% 50%;
-    }
+  100% {
+    background-position: 350% 50%, 350% 50%;
+  }
+}
 
-    100% {
-      background-position: 100% 50%;
-    }
+@keyframes text-shimmer {
+  0% {
+    background-position: 0% 50%;
   }
 
-  @keyframes pulse-glow {
+  100% {
+    background-position: 100% 50%;
+  }
+}
 
-    0%,
-    100% {
-      box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
-    }
+@keyframes pulse-glow {
 
-    50% {
-      box-shadow: 0 0 40px rgba(212, 175, 55, 0.6);
-    }
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+  }
+
+  50% {
+    box-shadow: 0 0 40px rgba(212, 175, 55, 0.6);
   }
 }
 
 /* Base Styles */
 body {
-  font-family: var(--font-body);
-  background-color: var(--color-charcoal);
-  color: var(--color-cream);
+  font-family: 'Inter', sans-serif;
+  background-color: #1a1a1a;
+  color: #f5f5dc;
   overflow-x: hidden;
-  /* Prevent horizontal scroll from animations */
 }
 
 h1,
@@ -63,7 +49,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-display);
+  font-family: 'Playfair Display', serif;
 }
 
 /* Premium Glass Effect */
@@ -72,19 +58,23 @@ h6 {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow:
-    0 4px 30px rgba(0, 0, 0, 0.1),
-    inset 0 0 20px rgba(255, 255, 255, 0.02);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), inset 0 0 20px rgba(255, 255, 255, 0.02);
   transition: all 0.3s ease;
 }
 
 .glass-premium:hover {
   background: rgba(255, 255, 255, 0.06);
   border-color: rgba(212, 175, 55, 0.3);
-  box-shadow:
-    0 8px 40px rgba(0, 0, 0, 0.2),
-    inset 0 0 20px rgba(255, 255, 255, 0.05),
-    0 0 20px rgba(212, 175, 55, 0.1);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2), inset 0 0 20px rgba(255, 255, 255, 0.05), 0 0 20px rgba(212, 175, 55, 0.1);
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), inset 0 0 20px rgba(255, 255, 255, 0.02);
+  transition: all 0.3s ease;
 }
 
 /* Aurora Background Utility */
@@ -99,20 +89,13 @@ h6 {
 }
 
 .text-shimmer {
-  background: linear-gradient(to right,
-      #bf953f 20%,
-      #fcf6ba 40%,
-      #bf953f 60%,
-      #b38728 80%);
+  background: linear-gradient(to right, #bf953f 20%, #fcf6ba 40%, #bf953f 60%, #b38728 80%);
   background-size: 200% auto;
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  animation: var(--animate-text-shimmer);
+  animation: text-shimmer 3s linear infinite;
 }
-
-/* Utility Classes for Glass/Gold (Legacy Support) */
-/* .glass-panel is now defined above with .glass-premium */
 
 .gold-text-gradient {
   background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
